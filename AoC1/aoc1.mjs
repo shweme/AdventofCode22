@@ -3,7 +3,7 @@ import * as fs from 'fs/promises';
 async function getData(filename){
     let elves = [];
     let data = await fs.readFile(filename, 'utf8'); // reading puzzle input
-    let arr = data.split('\r\n').join(",").split(',,'); //grouping puzzle input data by blank line demarkations in file
+    let arr = data.split('\r\n').join(",").split(',,'); //grouping puzzle input data by blank line demarcations in file
     for(let i = 0; i < arr.length; i++){
         elves.push(arr[i].split(',')); //separating lines into indiviual values
     }

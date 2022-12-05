@@ -3,7 +3,7 @@ import * as fs from 'fs/promises';
 async function getData(filename){
     let rucksacks = [];
     let data = await fs.readFile(filename, 'utf8'); // reading puzzle input
-    rucksacks = data.split('\r\n'); //grouping puzzle input data by blank line demarkations in file
+    rucksacks = data.split('\r\n'); //grouping puzzle input data by lines
     return rucksacks;
 }
 
