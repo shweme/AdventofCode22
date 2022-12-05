@@ -3,7 +3,7 @@ import * as fs from 'fs/promises';
 async function getData(filename){
     let cheatsheet = [];
     let data = await fs.readFile(filename, 'utf8'); // reading puzzle input
-    cheatsheet = data.split('\r\n').join(",").split(','); //grouping puzzle input data by each round's plays
+    cheatsheet = data.split('\r\n'); //grouping puzzle input data by each round's plays
     return cheatsheet;
 }
 
